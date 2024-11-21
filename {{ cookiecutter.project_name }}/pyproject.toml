@@ -1,0 +1,29 @@
+[project]
+name = "{{cookiecutter.__hyphenated}}"
+dynamic = ["version"]
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+{{ cookiecutter.__hyphenated }} = "{{ cookiecutter.__hyphenated }}.cli:main"
+
+{% if cookiecutter.build_system == "hatchling" %}
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/{{ cookiecutter.__hyphenated }}/__init__.py"
+{% else %}
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "{{cookiecutter.__underscored}}.__version__"}
+{% endif %}

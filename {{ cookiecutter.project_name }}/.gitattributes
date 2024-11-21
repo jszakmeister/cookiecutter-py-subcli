@@ -1,0 +1,17 @@
+.gitattributes	export-ignore
+.gitignore	export-ignore
+
+*.md		text whitespace=trailing-space,space-before-tab,tab-in-indent
+*.mk		text whitespace=trailing-space
+*.txt		text whitespace=trailing-space,space-before-tab
+*.rst		text whitespace=trailing-space,space-before-tab,tab-in-indent
+*.rest		text whitespace=trailing-space,space-before-tab,tab-in-indent
+
+*.py		text diff=python whitespace=trailing-space,space-before-tab,tab-in-indent
+
+*.sh		eol=lf whitespace=trailing-space,space-before-tab,tab-in-indent
+
+*.gif		binary
+*.jpg		binary
+*.png		binary
+*.tiff		binary
