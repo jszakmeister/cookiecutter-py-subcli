@@ -10,7 +10,7 @@ classifiers = [
 ]
 
 [project.scripts]
-{{ cookiecutter.__hyphenated }} = "{{ cookiecutter.__hyphenated }}.cli:main"
+{{ cookiecutter.__hyphenated }} = "{{ cookiecutter.__underscored }}.cli:main"
 
 {% if cookiecutter.build_system == "hatchling" %}
 [build-system]
