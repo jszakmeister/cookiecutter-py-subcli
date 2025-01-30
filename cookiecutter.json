@@ -1,6 +1,7 @@
 {
   "project_name": "subcli",
   "build_system": ["setuptools", "hatchling"],
+  "with_subcommands": true,
   "__hyphenated": "{{ cookiecutter.project_name.lower() | strip_prefix('py-', 'py_') | replace(' ', '-') }}",
   "__underscored": "{{ cookiecutter.__hyphenated.replace('-', '_') }}",
   "_jinja2_env_vars": {"lstrip_blocks": true, "trim_blocks": true},
