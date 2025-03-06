@@ -38,7 +38,7 @@ def do_work(args):
 {% endif %}
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(allow_abbrev=False)
 
     {% if cookiecutter.with_subcommands %}
     add_common_options(parser)
